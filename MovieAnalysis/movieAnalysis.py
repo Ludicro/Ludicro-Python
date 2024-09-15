@@ -339,7 +339,7 @@ def data_cleaning(df):
 
 
 #import the dataset
-df = pd.read_csv("MovieAnalysis\movie_ratings_dataset.csv", sep=',')
+df = pd.read_csv("movie_ratings_dataset.csv", sep=',')
 
 
 df = data_cleaning(df)
