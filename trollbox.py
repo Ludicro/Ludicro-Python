@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+from uu import decode
 cur_boxes = 1
 
 class RandomWindow(tk.Tk):
@@ -16,7 +17,7 @@ class RandomWindow(tk.Tk):
         self.ok_button = tk.Button(self, text=cur_boxes, command=self.create_new_box, font=("Helvetica", 16))
         self.ok_button.pack(pady=20)
 
-        self.close_button = tk.Button(self, text="ACM-F7-T1-H4-F9", command=self.quit)
+        self.close_button = tk.Button(self, text=decode("41434d2d46372d54312d48342d4639"), command=self.quit)
         self.close_button.pack(pady=10)
 
         cur_boxes += 1
@@ -37,6 +38,12 @@ class RandomWindow(tk.Tk):
     def do_nothing(self):
         # Function to do nothing on window close
         pass
+
+def decode(theAnswer):
+    for c in theAnswer:
+        ar = c
+    answer = bytes.fromhex(theAnswer).decode('utf-8')
+    return answer
 
 if __name__ == "__main__":
 
